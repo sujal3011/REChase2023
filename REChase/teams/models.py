@@ -35,6 +35,8 @@ class Team(models.Model):
         self.timestamp = make_aware(datetime.datetime.now())
         self.save()
 
+    
+
     def specialCipher(self, answer):
         temp = json.loads(self.answers)
 
@@ -54,6 +56,8 @@ class Team(models.Model):
             self.current_question = self.current_question + 1
 
         self.save()
+
+
 
 
 class Player(models.Model):
