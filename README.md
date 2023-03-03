@@ -1,4 +1,4 @@
-# REChase-2022
+# REChase-2023
 
 Online treasure hunt
 
@@ -16,8 +16,7 @@ myenv\scripts\activate
 ```
 
 > PS : Linux Users follow different guidelines
-> For further details refer <a href="https://www.geeksforgeeks.org/creating-python-virtual-environment-windows-linux/">https://www.geeksforgeeks.org/creating-python-virtual-environment-windows-linux/
-
+> For further details refer `<a href="https://www.geeksforgeeks.org/creating-python-virtual-environment-windows-linux/">`https://www.geeksforgeeks.org/creating-python-virtual-environment-windows-linux/
 
 Fast starting up quickly, do
 
