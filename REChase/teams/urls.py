@@ -14,7 +14,6 @@ urlpatterns = [
     path('playerdetail/', views.playerdetail, name='teamdetail'),
     path('detailedscore/',views.detailedScoreboardView, name='detailedscore'),
     path('chase/', views.get_level, name='get-level'),
-    path('chase/1', views.start_hunt, name='start_hunt'),
-
+    path('chase/1/', views.start_hunt, name='start_hunt'),
 
 ]
