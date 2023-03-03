@@ -44,32 +44,8 @@ INSTALLED_APPS = [
 
     # Created apps
     'teams',
-    'bit1',
-    # 'finalLevel',
-    'themeDeduction',
-    'magicalbox',
-    'turbanNumbers',
-    'jumble',
-    'wordRank',
-    'prefixSum',
-    'ciphers',
-    'guessing',
-    'coordinates',
-    'ideone',
-    'sudoku',
 
-    'nft1',
-    'cars2',
-    'palindrome3',
-    'chess4',
-    'museum5',
-    'closedsurface6',
-    'spell7',
-    'morse8',
-    'pattern9',
-    'evan10',
-    'catalan11',
-    'xor12',
+    
 ]
 
 MIDDLEWARE = [
@@ -191,7 +167,7 @@ MEDIA_URL = '/media/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static_cdn')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media_cdn')
 
-FINAL_LEVEL = 12
+FINAL_LEVEL = 0
 
 START_TIME = datetime.strptime(config('START_TIME'), "(%Y, %m, %d, %H, %M, %S, %f)")
 END_TIME = datetime.strptime(config('END_TIME'), "(%Y, %m, %d, %H, %M, %S, %f)")

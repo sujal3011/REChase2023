@@ -10,7 +10,7 @@ class Team(models.Model):
     name = models.CharField(max_length=128, null=True, unique=True)
     code = models.CharField(max_length=128, null=True, blank=True)
     member_count = models.IntegerField(default=0, null=True)
-    current_level = models.IntegerField(default=1, null=True)
+    current_level = models.IntegerField(default=0, null=True)
     current_question = models.IntegerField(default=-1, null=True)
     question = models.CharField(max_length=255, null=True, blank=True, default='-1')
     answers = models.CharField(max_length=8192, null=True, blank=True, default='{}')

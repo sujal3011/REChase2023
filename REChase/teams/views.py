@@ -79,7 +79,13 @@ def get_level(request):
     if level > settings.FINAL_LEVEL:
         return redirect('teams:scoreboard')
 
-    return redirect(request.path + str(level))
+    return redirect(request.path + str(1))
+
+@login_required
+@team_required
+def start_hunt(request):
+    return render(request,'teams/start_location.html')
+
 
 
 @login_required
@@ -215,17 +221,14 @@ def acceptTeamMateView(request):
 def scoreboardView(request):
     context = {'cur_time': datetime.datetime.now(), 'start_time': settings.START_TIME}
 
-    cur_rank = 1
+    cur_rank = 0
     try:
         all_teams = models.Team.objects.all()
         qs = all_teams.order_by('-score', 'timestamp')
         for pl in qs:
             pl.rank = cur_rank
-            cur_rank += 1
         context['qs'] = qs
     except:
-        context['wrong'] = 1
-    if cur_rank == 1:
         context['wrong'] = 1
     if datetime.datetime.now() < settings.START_TIME:
         context['wait'] = 1
@@ -254,7 +257,7 @@ def detailedScoreboardView(request):
     
     context = {'cur_time': datetime.datetime.now(), 'start_time': settings.START_TIME}
 
-    cur_rank = 1
+    cur_rank = 0
     
     all_teams = models.Team.objects.all()
     qs = all_teams.order_by('-score', 'timestamp')
@@ -298,7 +301,7 @@ def detailedScoreboardView(request):
                 "email2" : email2
             }
         )
-        cur_rank += 1
+        # cur_rank += 1
         context['qp'] = qp
         leveldetail=[]
         for i in range(1,13):

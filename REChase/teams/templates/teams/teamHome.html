@@ -143,7 +143,7 @@ input[type=submit] {
 		{% elif started %}
 			<p class="card-text" style="color: white; letter-spacing: 2px; font-family: 'Audiowide', sans-serif; padding-left: 10px;padding-right: 10px;visibility: visible;">
 				<a style="padding:6px; color: white; background:#ff009d; text-decoration: none; font-weight: 800; border-radius: 10px;" href="{% url 'teams:get-level' %}">Play</a>
-			</p>
+			</p> 
 		{% endif %}
 
     {% if applicants %}
@@ -163,21 +163,21 @@ input[type=submit] {
         {% endif %}
 
 
-        <!-- <h2 style="color: white;" class="text-center"><a style="padding:6px; color: white; background:rgb(150, 3, 3); text-decoration: none; font-weight: 800; border-radius: 10px;" href="{% url 'teams:get-level' %}">Play</a></h2> -->
+        <!-- <h2 style="color: white;" class="text-center"><a style="padding:6px; color: white; background:rgb(150, 3, 3); text-decoration: none; font-weight: 800; border-radius: 10px;" href="{% url 'teams:home' %}">Play</a></h2> -->
         <br>
         <div  class="row" >
             <div class="col-lg-6 mar" style="margin-bottom: 10px;">
                 <h2 style="color: white; font-family: 'Audiowide', sans-serif;" class="text-center">Team Code: {{team.code}}</h2>
             
-                <h2 style="color: white; font-family: 'Audiowide', sans-serif;" class="text-center">Score: {{team.score}}</h2>
+                {% comment %} <h2 style="color: white; font-family: 'Audiowide', sans-serif;" class="text-center">Score: {{team.score}}</h2> {% endcomment %}
                 
-                <h2 style="color: white; font-family: 'Audiowide', sans-serif;" class="text-center">Current level:
+                {% comment %} <h2 style="color: white; font-family: 'Audiowide', sans-serif;" class="text-center">Current level:
                 {% if  team.current_level > max_level  %}
                     {{ max_level }}
                 {% else %}
                     {{ team.current_level }}
                 {% endif %}
-                </h2>
+                </h2> {% endcomment %}
             </div>
             <div class="col-lg-6 mar" style="margin-bottom: 10px;">
                 <h2 style="color: white; font-family: 'Audiowide', sans-serif;" class="text-center">Team Members</h2>
@@ -200,7 +200,7 @@ input[type=submit] {
       font-family: 'Orbitron', sans-serif;
       letter-spacing: 2px;
       margin-top:5px;
-    ">Developed by: Team Aavishkar</p>
+    ">Developed by: Team RECursion</p>
     </div>
     <div class="socials">
       <li>
@@ -267,7 +267,7 @@ input[type=submit] {
 	
 	  if (distance < 0) {
 		clearInterval(x);
-		document.getElementById("timer").innerHTML = '<a style="text-decoration: none; color:white" href="{% url "teams:get-level" %}"> REChase is LIVE now !!</a>';
+		document.getElementById("timer").innerHTML = '<a style="text-decoration: none; color:white"> REChase is LIVE now !!</a>';
 	  }
 
 
