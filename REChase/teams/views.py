@@ -67,7 +67,6 @@ def home(request):
 
     return render(request, 'teams/teamHome.html', context)
 
-
 @login_required
 @team_required
 def get_level(request):

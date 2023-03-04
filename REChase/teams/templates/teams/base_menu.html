@@ -10,22 +10,30 @@ REChase {% endblock %} {% block content %}
   rel="stylesheet"
 />
 
-<link
+{% comment %} <link
   href="//db.onlinewebfonts.com/c/6fa311acd94491feaf45cceecf9f9398?family=KTech"
   rel="stylesheet"
   type="text/css"
-/>
+/> {% endcomment %}
 
 <style>
-  @import url(//db.onlinewebfonts.com/c/6fa311acd94491feaf45cceecf9f9398?family=KTech);
+  {% comment %} @import url(//db.onlinewebfonts.com/c/6fa311acd94491feaf45cceecf9f9398?family=KTech); {% endcomment %}
   .home {
     padding: 5px;
   }
+
+
+  @font-face {
+    font-family: KTech2;
+    src: url("{% static 'teams/images/ktech.ttf' %}") format("truetype");
+  }
+
+
   .home .container {
     max-width: 120%;
     border-radius: 8px;
     border-bottom: solid 2px rgb(212, 76, 18);
-    box-shadow: 0px 1px 12px 0px #e97957;
+    box-shadow: 0px 1px 12px 0px #E97957;
     backdrop-filter: blur(5px);
   }
   /*rechase-image*/
@@ -317,7 +325,8 @@ REChase {% endblock %} {% block content %}
   .waviy {
     margin-top: 50px;
     /* {% comment %} font-family: 'Old English Text MT'; {% endcomment %} */
-    font-family: "KTech", sans-serif;
+    font-family: KTech2;
+    {% comment %} font-family: "KTech", sans-serif; {% endcomment %}
     /* {% comment %} font-family: 'Pirata One', cursive; {% endcomment %} */
     text-align: center;
     font-size: 5.510416666666667vw;
