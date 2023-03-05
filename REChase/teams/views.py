@@ -132,7 +132,7 @@ def joinTeam(request):
         if not team:
             context['wrong_code'] = 'Invalid code entered.'
             return render(request, 'teams/teamJoin.html', context=context)
-        if team.member_count >= 2:
+        if team.member_count >= 5:
             context['team_full'] = 'Team is full.'
             return render(request, 'teams/teamJoin.html', context=context)
         profile.team = team
@@ -206,7 +206,7 @@ def acceptTeamMateView(request):
         applicant.team = None
         applicant.save()
     elif verdict == 'Accept':
-        if team.member_count >= 2:
+        if team.member_count >= 5:
             context['team_full'] = 'Team is full.'
             return redirect('teams:home')
         applicant.accepted = 1
