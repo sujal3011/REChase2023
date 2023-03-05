@@ -26,7 +26,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG')
 
-ALLOWED_HOSTS = ['rechase.pythonanywhere.com', '*']
+ALLOWED_HOSTS = ['rechase2023.pythonanywhere.com', '*']
 
 # Application definition
 
@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     # Created apps
     'teams',
 
-    
+
 ]
 
 MIDDLEWARE = [
