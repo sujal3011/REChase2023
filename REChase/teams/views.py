@@ -51,7 +51,7 @@ def home(request):
     everyone = models.Player.objects.filter(team=team.pk)
     team_players = everyone.filter(accepted=1)
     context = {'team': team, 'profile': profile, 'players': team_players, 'max_level': settings.FINAL_LEVEL}
-    if team.member_count < 2:
+    if team.member_count < 5:
         applicants = everyone.filter(accepted=0)
         context['applicants'] = applicants
 
