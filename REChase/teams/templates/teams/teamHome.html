@@ -3,6 +3,8 @@
 {% load static %}
 {% block content %}
 
+
+
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -10,6 +12,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/d43543296f.js" crossorigin="anonymous"></script>
+
+
 
 <style>
   
@@ -99,17 +104,82 @@
 		color: white;
 	}
 
+
+  .join_grp_img{
+    border: none;
+    width: 100%;
+  }
+
+  .qr_container{
+    padding: 1em;
+    color: white;
+    background: transparent;
+    text-decoration: none;
+    font-weight: 800;
+    border-radius: 10px;
+    font-size: 1.2em;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+    margin-left: 5rem;
+  }
+
+  .join_heading{
+    font-size: 3rem;
+    color:#E97957;
+  }
+
+  .join_container{
+    margin-top: 3rem;
+  }
+
+  .join_container a:hover{
+    
+      border: solid 1px #E97957;
+      box-shadow: 0 0 5px #E97957, 0 0 25px #E97957;
+      border-radius: 9px;
+  
+  }
+
+
+
+  @media (max-width: 800px) {
+    .footer-content p {
+      font-size: 1.3rem;
+    }
+
+    .qr_container{
+      width: 35%;
+    }
+}
+
+
   @media (max-width: 600px) {
 		.footer-content p {
 			font-size: 1.2rem;
 		}
+
+    .join_container{
+      flex-direction: column;
+    }
+  
+    .qr_container{
+      width: 43%;
+      margin-left: 0;
+      margin-top: 2rem;
+    }
+
+    .join_heading{
+      font-size: 2.5rem;
+
+    }
+
 	}
 
-	@media (max-width: 800px) {
-	    .footer-content p {
-		    font-size: 1.3rem;
-	    }
-	}
+	
     </style>
 
 <style> 
@@ -134,8 +204,43 @@ input[type=submit] {
         <h1 style="color: white; font-family: 'Fast Hand', sans-serif;" class="text-center">{{team.name}}</h1>
 
         {% if wait %}
+
+        <div>
+
 			<p class="card-text" style="color: white; letter-spacing: 2px; font-family: 'Orbitron', sans-serif;padding-left: 10px;padding-right: 10px;visibility: visible;" id="timer">
 			</p>
+
+      <div style="color: white; letter-spacing: 2px; font-family: 'Orbitron', sans-serif; padding-left: 10px;padding-right: 10px;visibility: visible;">
+        <h1 class="join_heading">Join the official Whatsapp group of REChase</h1>
+
+        <div class="join_container" style="display: flex;justify-content: center;align-items: center;flex-wrap: wrap;">
+
+         
+
+          <a style="padding:1em;color: white;background: transparent;text-decoration: none;font-weight: 800;border-radius: 10px;font-size: 1.2em;border: 1px solid white;display: flex;align-items: center;justify-content: center;" href="https://chat.whatsapp.com/BZDuCkjqY0jEA2GiSJGKaw" target="_blank">
+
+            Click to Join 
+            <i class="fa-brands fa-whatsapp fa-2x" style="margin-left: 0.4em;"></i>
+          
+          </a>
+          
+
+
+          <div class="qr_container">
+            <span>Scan to Join</span>
+            
+            <img class="join_grp_img" src="{% static 'teams/images/whatsapp_QR2.jpeg' %}" alt="QR"> 
+
+          </div> 
+
+        </div>
+
+
+      </div>
+
+      </div>
+
+        
 		{% elif finish %}
 			<p class="card-text" style="color: white; letter-spacing: 2px; font-family: 'Orbitron', sans-serif; padding-left: 10px;padding-right: 10px;visibility: visible;">
 				REChase Completed <a style="text-decoration: none; color:white" href="{% url 'teams:scoreboard' %}">!! Visit Leaderboard  !!</a>
@@ -155,8 +260,8 @@ input[type=submit] {
                                 {{ applicant.name }} ( {{ applicant.email }} )
                                 
                             <input type="hidden" name="ID" value="{{ applicant.id }}"/>
-                            <input style="background:#ff009d; color:white;font-family: 'Orbitron', sans-serif;" type="submit" name="verdict" value="Accept" >
-                            <input style="background:#ff009d; color:white;font-family: 'Orbitron', sans-serif;" type="submit" name="verdict" value="Reject" >
+                            <input style="background:#E97957; color:white;font-family: 'Orbitron', sans-serif;" type="submit" name="verdict" value="Accept" >
+                            <input style="background:#E97957; color:white;font-family: 'Orbitron', sans-serif;" type="submit" name="verdict" value="Reject" >
                         </form>
                     </h3>
                 {% endfor %}

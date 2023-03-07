@@ -10,6 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/d43543296f.js" crossorigin="anonymous"></script>
 
 <style>
   
@@ -99,17 +100,81 @@
 		color: white;
 	}
 
-  @media (max-width: 600px) {
-		.footer-content p {
-			font-size: 1.2rem;
-		}
-	}
+  .join_grp_img{
+    border: none;
+    width: 100%;
+  }
+
+  .qr_container{
+    padding: 1em;
+    color: white;
+    background: transparent;
+    text-decoration: none;
+    font-weight: 800;
+    border-radius: 10px;
+    font-size: 1.2em;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    margin-left: 5rem;
+  }
+
+  .join_heading{
+    font-size: 3rem;
+    color:#E97957;
+  }
+
+  .join_container{
+    margin-top: 3rem;
+  }
+
+  .join_container a:hover{
+    
+    border: solid 1px #E97957;
+    box-shadow: 0 0 5px #E97957, 0 0 25px #E97957;
+    border-radius: 9px;
+
+}
+
+  
 
 	@media (max-width: 800px) {
 	    .footer-content p {
 		    font-size: 1.3rem;
-	    }
+      }
+
+      .qr_container{
+        width: 35%;
+      }
+
+
 	}
+
+  @media (max-width: 600px) {
+		.footer-content p {
+			font-size: 1.2rem;
+		}
+
+    .join_container{
+      flex-direction: column;
+    }
+  
+    .qr_container{
+      width: 43%;
+      margin-left: 0;
+      margin-top: 2rem;
+    }
+
+    .join_heading{
+      font-size: 2.5rem;
+
+    }
+	}
+
+
     </style>
 
 <style> 
@@ -137,7 +202,7 @@ input[type=submit] {
 				REChase is LIVE!
 			</p>
 
-        <br>
+      <br>
         <div  class="row" >
             <div class="col-lg-12 mar" style="margin-bottom: 10px;">
                 <h2 style="color: white; font-family: 'Audiowide', sans-serif;" class="text-center">Visit to the tennis court to get clue to your first location</h2>
@@ -146,8 +211,40 @@ input[type=submit] {
         </div>
         <br>
 
+      <div style="color: white; letter-spacing: 2px; font-family: 'Orbitron', sans-serif; padding-left: 10px;padding-right: 10px;visibility: visible;">
+        <h1 class="join_heading">Join the official Whatsapp group of REChase</h1>
+
+        <div class="join_container" style="display: flex;justify-content: center;align-items: center;flex-wrap: wrap;">
+
+         
+
+          <a style="padding:1em;color: white;background: transparent;text-decoration: none;font-weight: 800;border-radius: 10px;font-size: 1.2em;border: 1px solid white;display: flex;align-items: center;justify-content: center;" href="https://chat.whatsapp.com/BZDuCkjqY0jEA2GiSJGKaw" target="_blank">
+
+            Click to Join 
+            <i class="fa-brands fa-whatsapp fa-2x" style="margin-left: 0.4em;"></i>
+          
+          </a>
+          
+
+
+          <div class="qr_container">
+            <span>Scan to Join</span>
+            
+            <img class="join_grp_img" src="{% static 'teams/images/whatsapp_QR2.jpeg' %}" alt="QR"> 
+
+          </div> 
+
+        </div>
+
+
+      </div>
+
+        
+
   </div>
-  </div>
+</div>
+
+
   <div style="height: 100px;"></div>
 
 
