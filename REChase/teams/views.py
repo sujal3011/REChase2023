@@ -155,6 +155,8 @@ def profileCompleteView(request):
         form.clean()
         profile.name = form.cleaned_data['name']
         profile.phone = form.cleaned_data['phone']
+        profile.name = form.cleaned_data['gender']
+        profile.name = form.cleaned_data['college']
         profile.save()
         return redirect('teams:home')
     context['form'] = form
