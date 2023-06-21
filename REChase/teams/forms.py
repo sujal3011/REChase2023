@@ -5,7 +5,6 @@ from .models import (
     Player
 )
 
-
 class TeamCreationForm(forms.ModelForm):
     class Meta:
         model = Team
