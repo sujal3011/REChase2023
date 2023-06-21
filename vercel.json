@@ -1,13 +1,13 @@
 {
     "builds": [{
-        "src": "REChase/wsgi.py",
+        "src": "REChase/REChase/wsgi.py",
         "use": "@vercel/python",
         "config": { "maxLambdaSize": "15mb", "runtime": "python3.10" }
     }],
     "routes": [
         {
             "src": "/(.*)",
-            "dest": "REChase/wsgi.py"
+            "dest": "REChase/REChase/wsgi.py"
         }
     ]
 }
